@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+    kbuild:
+        build: yokogawa/build-debian-kernel-package
+        volumes:
+            - ./:/usr/src/
+        #   - ./kernel-pkg.conf:/root/.kernel-pkg.conf:ro
+        command: ["build"]
+        #environment:
+        #    # specific kernel version
+        #    - LATEST=4.7.0
+        #    # archive download url 
+        #    - BASEURL=http://ftp.iij.ad.jp/pub/linux/kernel/linux/kernel
+
